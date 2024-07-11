@@ -1,14 +1,64 @@
-<button onclick="showContent()">Show hidden content</button>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Flower Display</title>
+    <style>
+        .content {
+            display: none;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .content img {
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .toggle-button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .toggle-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
 
-<template>
-  <h2>Flower</h2>
-  <img src="img_white_flower.jpg" width="214" height="204">
+<button class="toggle-button" onclick="toggleContent()">Show hidden content</button>
+
+<template id="contentTemplate">
+    <div class="content">
+        <h2>Flower</h2>
+        <img src="img_white_flower.jpg" width="214" height="204">
+    </div>
 </template>
 
 <script>
-function showContent() {
-  let temp = document.getElementsByTagName("template")[0];
-  let clon = temp.content.cloneNode(true);
-  document.body.appendChild(clon);
+function toggleContent() {
+    let button = document.querySelector('.toggle-button');
+    let temp = document.getElementById('contentTemplate');
+    let content = document.querySelector('.content');
+
+    if (!content) {
+        let clon = temp.content.cloneNode(true);
+        document.body.appendChild(clon);
+        button.textContent = 'Hide content';
+    } else {
+        content.style.display = content.style.display === 'none' ? 'block' : 'none';
+        button.textContent = content.style.display === 'none' ? 'Show hidden content' : 'Hide content';
+    }
 }
 </script>
+
+</body>
+</html>
