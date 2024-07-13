@@ -1,65 +1,90 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Flower Display</title>
-    <style>
-        .content {
-            display: none;
-            text-align: center;
-            margin-top: 20px;
-        }
-        .content img {
-            border: 2px solid #ccc;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-        .toggle-button {
-            display: block;
-            margin: 20px auto;
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-        .toggle-button:hover {
-            background-color: #45a049;
-        }
-    </style>
-</head>
-<body>
+<html>
+    <!--Home  Expenses-tracker(QOL estimater)   Calculators   Course(Quiz)   AI-chatbot    Sign-in-->
+    <header>
+      <div style="display: flex; justify-content: center; align-items: center;">
+        <img src="images/logo.png" alt="our logo" height="200" width="475"><br>
+      </div>
+      
 
-<button class="toggle-button" onclick="toggleContent()">Show hidden content</button>
+      <button style="font-size:30px; background-color: #008000; color: black;">Home</button>
+      <button style="font-size:30px; background-color: green; color: black;">Expenses-tracker</button>
+      <button style="font-size:30px; background-color: green; color: black;">Calculators</button>
+      <button style="font-size:30px; background-color: green; color: black;">Course</button>
+      <button style="font-size:30px; background-color: green; color: black;">Ask AI</button>
+      <button style="font-size:30px; background-color: green; color: black;">Sign-in</button>
+      
+    </header>
+    <head>
+      <title>Money Buddy</title>
+      <link rel="icon" type="image/webp" href="images/money.webp">
+    </head>
+    <body style="background-color: black;">
+      <br><hr>
+      <h1 style="color: #6da16d; text-align: center;">Purpose</h1>
+      <pre style="color:white;text-align: center;">
+        Welcome to Money Buddy, your all encompassing financial assistant.
+        Our purpose as a driven trio of High School students from 
+        Great Valley High School is to help increase financial literacy amongst 
+        our community. Whether it's tracking expenses, estimating future quality 
+        of life (QOL) or participating in our extensive courses and quizzes, 
+        Money Buddy is here to help. Furthermore, the use of an AI-chatbot 
+        in our app helps make answering any questions that you may encounter 
+        easier than ever before.
+      </pre>
+      <h1 style="color: #6da16d;text-align: center;">About us</h1>
+      <pre style="color: white;text-align: center;">
+        Money Buddy was a founded by a enthusiastic trio of Arpit Ahuja,
+        Danny Gardner, and Isaac Xiao. All three of us are rising juniors 
+        at Great Valley High School and have several years of experience 
+        in Computer Science. 
+      </pre>
+      <ul class="Meet-The-Team">
+        <li>
+          <h2 style="color: #6da16d;text-align: center;">Arpit Ahuja</h2>
+          <p style="color: white;text-align: center;">
+            Arpit is a rising junior at GVHS and a technology expert 
+            specializing in software development and data analytics. 
+            He helps analyze many trends found in the market and 
+            implement integral aspects of it into Money Buddy. 
+          </p>
+        </li>
+        <li>
+          <h2 style="color: #6da16d;text-align: center;">Isaac Xiao</h2>
+          <p style="color: white;text-align: center;">
+            Isaac is a rising junior with immenese enthusiasm to share his
+            knowledge of financial analysis thorugh the 
+            Money Buddy App. His years of experience with personal finance
+            management and investment strategies are invaluable to shaping
+            the various tools in Money Buddy. 
+          </p>
+        </li>
+        <li>
+          <h2 style="color: #6da16d;text-align: center;">Danny Gardner</h2>
+          <p style="color: white;text-align: center;">
+            Danny is also a rising Junior who plays an integral role on the 
+            Money Buddy team. He has a passion for teaching and strives to 
+            improve financial literacy in the community. He is instrumental 
+            in creating the educational content and courses that help users 
+            gain a in-depth understanding of personal finance. 
+          </p>
+        </li>
 
-<template id="contentTemplate">
-    <div class="content">
-        <h2>Flower</h2>
-        <img src="img_white_flower.jpg" width="214" height="204">
-    </div>
-</template>
-
-<script>
-function toggleContent() {
-    let button = document.querySelector('.toggle-button');
-    let temp = document.getElementById('contentTemplate');
-    let content = document.querySelector('.content');
-
-    if (!content) {
-        let clon = temp.content.cloneNode(true);
-        document.body.appendChild(clon);
-        button.textContent = 'Hide content';
-    } else {
-        content.style.display = content.style.display === 'none' ? 'block' : 'none';
-        button.textContent = content.style.display === 'none' ? 'Show hidden content' : 'Hide content';
-    }
-}
-</script>
-
-</body>
+      </ul>
+    </body>
+    <footer>
+      <br><br><br><br><br>
+      <h1 style="color: #ffffff;">JOIN OUR MAILING LIST</h1>
+      <p style="color: #ffffff;">Sign up and receive the latest news in finance!</p>
+      <hr>
+      <form>
+        <br>
+        <label for="name" style="color: #ffffff;">First Name: </label>
+        <br><input type="text" id="name" style="width: 400px;">
+        <br><br><label for="email" style="color: #ffffff;">Email: </label>
+        <br><input type="email" id="email" style="width: 400px;">
+        <br><br><br>
+        <button></button>
+      </form>
+    </footer>
 </html>
-//hi :)
