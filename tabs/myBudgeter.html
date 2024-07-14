@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Money Buddy</title>
+        <link rel="icon" type="image/webp" href="/images/money.webp">
+        <style>
+          .button {
+            margin: 50px;
+            font-size: 40px;
+            background-color: green;
+            color: black;
+            text-align: center;
+            justify-content: right;
+          }
+          .form-group {
+            margin-bottom: 20px;
+          }
+          .form-group label{
+            width: 150px;
+            float:right;
+
+          }
+          .form-group input,
+          .form-group select,
+          .form-group textarea{
+            padding: 10px;
+            font-size: 20px;
+            width: 300px;
+            float: right;
+          }
+          form {
+            display: flex;
+            flex-direction: column;
+            align-items: right;
+
+          }
+        </style>
+    </head>    
+    <header>
+      <div style="display: flex; justify-content: center; align-items: center;">  <!--Creates a logo for the app at the center--> 
+        <a href="/tabs/index.html">
+          <img src="/images/logo.png" alt="our logo" height="200" width="475"><br> <!--Sets height and width-->
+        </a>
+      </div>
+      <!--has links to take to separate parts of app when clicked-->
+      <div style="text-align: center;">
+        <a href="/tabs/ExpensesTracker.html">
+          <button class="button">Expenses-tracker</button>
+        </a>
+        <a href="/tabs/myBudgeter.html">
+          <button class="button">myBudgeter</button>
+        </a>
+        <a href="/tabs/Course.html">
+          <button class="button">Course</button>
+        </a>
+        <a href="/tabs/AI.html">
+          <button class="button">Ask AI</button>
+        </a>
+        <a href="/tabs/SignIn.html">
+          <button class="button">Sign-in</button>
+        </a>
+      </div>
+    </header>
+
+
+    <!--body space to input info-->
+    <body style="background-color: black; color: white;">
+        <br><hr>
+        <style>
+          .side-buttons {
+              position: fixed;
+              top: 50%;
+              right: 20px;
+              transform: translateY(-50%);
+              z-index: 999; /* Ensures buttons are above other content */
+          }
+          .side-buttons button {
+              display: block;
+              margin-bottom: 10px;
+              width: 100px; /* Adjust button width as needed */
+              padding: 10px;
+              background-color: #007bff;
+              color: white;
+              border: none;
+              cursor: pointer;
+          }
+      </style>
+      <div class="side-buttons">
+        
+      </div>
+
+
+
+
+
+
+
+
+
+
+        <h2 style="text-align: right;">Input Your Information</h2>
+        <form>
+          <!--label for income-->
+          <div class="form-group"> 
+            <br>
+            <label for="income">Monthly Income:</label>
+            <input type="number" id="income" name="income" placeholder="Enter your monthly income" style="justify-content: flex-end;"></input>
+          </div>
+          
+          <!--label for expenses-->
+          <div class="form-group">
+            <br>
+            <label for="expenses">Monthly Expenses:</label>
+            <input id="expenses" name="expenses" style="justify-content: flex-end;"placeholder="Enter your monthly expenses"></input>
+          </div>
+          
+          <!--category to select the rent, utilities, groceries, or transportation as expense-->
+          <div class="form-group">
+            <br>
+            <label for="category">Category:</label>
+            <select id="category" name="category" style="width: 324px;justify-content: flex-end;">
+              <option value="rent">Rent</option>
+              <option value="utilities">Utilities</option>
+              <option value="groceries">Groceries</option>
+              <option value="transportation">Transportation</option>
+            </select>
+          </div>
+          
+          <!--button to submit the inputs of the user-->
+          <br><button type="submit" class="button" style="font-size: 20px; padding: 10px 20px;">Submit</button>
+        </form>
+    </body>
+</html>
