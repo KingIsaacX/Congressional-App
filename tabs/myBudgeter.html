@@ -9,15 +9,14 @@
             font-size: 40px;
             background-color: green;
             color: black;
-            text-align: center;
-            justify-content: right;
+            
           }
           .form-group {
             margin-bottom: 20px;
           }
           .form-group label{
             width: 150px;
-            float:right;
+            
 
           }
           .form-group input,
@@ -26,13 +25,13 @@
             padding: 10px;
             font-size: 20px;
             width: 300px;
-            float: right;
+            
           }
           form {
             display: flex;
             flex-direction: column;
-            align-items: right;
-
+            margin-left: 40%;
+            
           }
         </style>
     </head>    
@@ -64,60 +63,85 @@
 
 
     <!--body space to input info-->
-    <body style="background-color: black; color: white;">
+    <body style="background-color: black; color: white;height: 100%;">
         <br><hr>
+        <h2 style="margin-left: 40%;">Savings Tracker</h1>
         <style>
-          .side-buttons {
-              position: fixed;
-              top: 50%;
-              right: 20px;
-              transform: translateY(-50%);
-              z-index: 999; /* Ensures buttons are above other content */
+          .sidebar{
+            position: absolute;
+            left:0;
+            width: 25%;
+            height: 100%;
+            background: rgb(124, 139, 160);
+            z-index: 20;
           }
-          .side-buttons button {
-              display: block;
-              margin-bottom: 10px;
-              width: 100px; /* Adjust button width as needed */
-              padding: 10px;
-              background-color: #007bff;
-              color: white;
-              border: none;
-              cursor: pointer;
+          .sidebar header{
+            font-size: 22px;
+            color: aliceblue;
+            text-align: center;
+            line-height: 70px;
+            background-color: rgb(61, 75, 70);
+            user-select: none;
           }
-      </style>
-      <div class="side-buttons">
+          .sidebar ul{
+            padding:0;
+            margin:0;
+          }
+          .sidebar ul a{
+            display: block;
+            height: 100%;
+            width: 100%;
+            line-height: 120px;
+
+            font-size: 20px;
+            color: aliceblue;
+            padding-left: 40px;
+            box-sizing: border-box;
+            border-top: 1px solid rgb(96, 43, 146);
+            border-bottom: 1px solid black;
+            transform: .4s;
+          }
+          ul li:hover a{
+            padding-left: 55px;
+            border-left: 7px solid rgb(81, 98, 192);
+          }
+          
+        </style>
         
-      </div>
 
 
 
+        <div class="sidebar">
+          <header>Tabs</header>
+          <ul>
+            <li style="list-style-type: none;"><a href ="">Savings Tracker</li>
+            <li style="list-style-type: none;"><a href ="">hello</li>
+            <li style="list-style-type: none;"><a href ="">hello</li>
+            <li style="list-style-type: none;"><a href ="">hello</li>
+          </ul>
+        </div>
 
 
-
-
-
-
-
-        <h2 style="text-align: right;">Input Your Information</h2>
+        <h2 style="margin-left: 40%;">Input Your Information</h2>
         <form>
           <!--label for income-->
           <div class="form-group"> 
             <br>
-            <label for="income">Monthly Income:</label>
-            <input type="number" id="income" name="income" placeholder="Enter your monthly income" style="justify-content: flex-end;"></input>
+            <label for="income" style="margin-right: 17px;">Monthly Income:</label>
+            <input type="number" id="income" name="income" placeholder="Enter your monthly income"></input>
           </div>
           
           <!--label for expenses-->
           <div class="form-group">
             <br>
             <label for="expenses">Monthly Expenses:</label>
-            <input id="expenses" name="expenses" style="justify-content: flex-end;"placeholder="Enter your monthly expenses"></input>
+            <input id="expenses" name="expenses"placeholder="Enter your monthly expenses"></input>
           </div>
           
           <!--category to select the rent, utilities, groceries, or transportation as expense-->
           <div class="form-group">
             <br>
-            <label for="category">Category:</label>
+            <label for="category" style="margin-right: 84px;">Category:</label>
             <select id="category" name="category" style="width: 324px;justify-content: flex-end;">
               <option value="rent">Rent</option>
               <option value="utilities">Utilities</option>
